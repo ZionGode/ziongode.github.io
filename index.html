@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Website Template</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f7f7f7;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-areas:
+          "header"
+          "menu"
+          "main"
+          "footer";
+        grid-template-rows: auto auto 1fr auto;
+        min-height: 100vh;
+      }
+
+      header {
+        grid-area: header;
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 2em;
+      }
+
+      header p {
+        margin: 0;
+        font-size: 1.2em;
+      }
+
+      nav {
+        grid-area: menu;
+        display: flex;
+        justify-content: center;
+        background-color: #333;
+        padding: 10px;
+      }
+
+      nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        font-size: 1.1em;
+        transition: color 0.3s ease;
+      }
+
+      nav a:hover {
+        color: #ffd700;
+      }
+
+      main {
+        grid-area: main;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      .portfolio-item {
+        margin-bottom: 30px;
+      }
+
+      .portfolio-item h2 {
+        color: #333;
+        font-size: 1.5em;
+      }
+
+      .portfolio-item h3 {
+        color: #333;
+        font-size: 1.2em;
+      }
+
+      .portfolio-item p {
+        font-size: 1.1em;
+      }
+
+      form {
+        margin-top: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 1.1em;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+        font-size: 1em;
+      }
+
+      button {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 15px;
+        font-size: 1.1em;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #ffd700;
+      }
+
+      footer {
+        grid-area: footer;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <header>
+        <h1>Your Name</h1>
+        <p>Web Developer</p>
+      </header>
+
+      <nav>
+        <a href="#Home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <main>
+        <section id="about" class="portfolio-item">
+          <h2>About Me</h2>
+          <p>
+            Hi, I'm [Your Name], a passionate and dedicated web developer based
+            in [Your Location]. With a strong background in front-end and
+            back-end technologies, I love turning ideas into beautiful,
+            interactive, and user-friendly websites. My goal is to create
+            seamless and innovative digital experiences that leave a lasting
+            impression. I believe in the power of technology to transform ideas
+            into reality, and I'm excited about the endless possibilities that
+            lie ahead in the world of web development.
+          </p>
+        </section>
+
+        <section id="portfolio" class="portfolio-item">
+          <h2>Portfolio</h2>
+          <div id="project1">
+            <h3>Project 1</h3>
+            <p>Description of Project 1.</p>
+          </div>
+          <div id="project2">
+            <h3>Project 2</h3>
+            <p>Description of Project 2.</p>
+          </div>
+          <div id="project3">
+            <h3>Project 3</h3>
+            <p>Description of Project 3.</p>
+          </div>
+        </section>
+
+        <section id="contact" class="portfolio-item">
+          <h2>Contact Me</h2>
+          <p>
+            If you have any questions, inquiries, or just want to say hello,
+            feel free to reach out to me using the form below. I'll get back to
+            you as soon as possible.
+          </p>
+
+          <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required />
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+          </form>
+        </section>
+      </main>
+
+      <footer>&copy; 2024 Zion Godet</footer>
+    </div>
+  </body>
+</html>
