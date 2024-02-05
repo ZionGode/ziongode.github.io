@@ -1,0 +1,197 @@
+/* Resetting default margin and font-family for body */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  /* Grid layout for the page */
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      "header header header header"
+      "nav nav nav nav"
+      "aside main main main"
+      "footer footer footer footer";
+    grid-template-rows: auto auto 1fr auto;
+    min-height: 100vh;
+  }
+
+  /* Styling for the header section */
+  header {
+    grid-area: header;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative; /* Required for positioning the tooltip */
+  }
+
+  /* Styling for h1 in the header */
+  header h1 {
+    margin: 0;
+    font-size: 2em;
+  }
+
+  /* Styling for p in the header */
+  header p {
+    margin: 0;
+    font-size: 1.2em;
+  }
+
+  /* Tooltip appearance on header hover */
+  header:hover::before {
+    content: "Your hover message here"; /* Add your desired hover message */
+    display: block;
+    position: absolute;
+    top: 100%; /* Position it below the header */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%);
+    background-color: #ffd700;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 1;
+  }
+
+  /* Styling for the navigation section */
+  nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px;
+  }
+
+  /* Styling for navigation links */
+  nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+  }
+
+  /* Styling for navigation links on hover */
+  nav a:hover {
+    color: #ffd700;
+  }
+
+  /* Styling for the aside section */
+  aside {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    justify-content: center;
+    grid-area: aside;
+    text-align: center;
+  }
+
+  /* Styling for h2 in aside */
+  aside h2 {
+    color: #fff;
+    font-size: 1.5em;
+  }
+
+  /* Styling for project list in aside */
+  aside ul {
+    list-style-type: none;
+    padding: 0; /* Remove default padding from the list */
+  }
+
+  /* Styling for list items in aside */
+  aside li {
+    margin-bottom: 10px; /* Add margin between list items */
+  }
+
+  /* Styling for links in aside */
+  aside a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+  }
+
+  /* Styling for links in aside on hover */
+  aside a:hover {
+    color: #ffd700;
+  }
+
+  /* Styling for the main section */
+  main {
+    grid-area: main;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  /* Styling for portfolio items */
+  .portfolio-item {
+    margin-bottom: 30px;
+  }
+
+  /* Styling for h2 in portfolio items */
+  .portfolio-item h2 {
+    color: #333;
+    font-size: 1.5em;
+  }
+
+  /* Styling for h3 in portfolio items */
+  .portfolio-item h3 {
+    color: #333;
+    font-size: 1.2em;
+  }
+
+  /* Styling for paragraphs in portfolio items */
+  .portfolio-item p {
+    font-size: 1.1em;
+  }
+
+  /* Styling for the form section */
+  form {
+    margin-top: 20px;
+  }
+
+  /* Styling for labels in the form */
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+  }
+
+  /* Styling for input and textarea in the form */
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    font-size: 1em;
+  }
+
+  /* Styling for buttons */
+  button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 1.1em;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  /* Styling for buttons on hover */
+  button:hover {
+    background-color: #ffd700;
+  }
+
+  /* Styling for the footer section */
+  footer {
+    grid-area: footer;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
